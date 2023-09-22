@@ -1,7 +1,3 @@
-*Disclaimer - Domino Reference Projects are starter kits built by Domino researchers. They are not officially supported by Domino. Once loaded, they are yours to use or modify as you see fit. We hope they will be a beneficial tool on your journey!
-
-## Welcome to the Domino Reference Project for...
-
 # Explainable AI
 
 ![img](https://github.com/dominodatalab/domino-reference-project-xai/blob/master/scratch/blackbox.png?raw=true)
@@ -18,7 +14,7 @@ This project contains starter code for a few of these approaches and some educat
 * [SHAP_and_LIME.ipynb](./view/SHAP_and_LIME.ipynb)  -  a how-to notebook
 * [rtemis.R](./view/rtemis.R)  -  a how-to R file
 * [traditional_methods.ipynb](./view/traditional_methods.ipynb)  -  a how-to notebook
-* [Navigating Interpretable and Predictive Models.pdf](./view/Navigating+Interpretable+and+Predictive+Models.pdf)  -  slides from the Domino tech talk on xAI which includes many links to further research
+* [Navigating Interpretable and Predictive Models.pdf](./view/Navigating+Interpretable+and+Predictive+Models.pdf)  -  slides from the tech talk on xAI which includes many links to further research
 
 ## Suggested Actions
 
@@ -31,14 +27,6 @@ This project contains starter code for a few of these approaches and some educat
 
 ## Prerequisites
 
-This project uses standard python libraries and any base Domino image should work well. The last test was done on *standard-environment:ubuntu18-py3.8-r4.1-domino5.1*. The additional Python libraries needed are *shap*, *lime*, and *pycebox*. You can simply install them in the cell provided when running the notebook interactively. Alternatively, you can add them to a custom compute environment by appending the following lines to the *standard-environment:ubuntu18-py3.8-r4.1-domino5.1* dockerfile:
+This project uses standard python libraries and any base python install should work well. The Python libraries *shap*, *lime*, and *pycebox* will probably need to be installed separately. 
 
-```
-RUN echo "ubuntu    ALL=NOPASSWD: ALL" >> /etc/sudoers
-RUN pip install --upgrade pip
-RUN pip install pycebox \
-                lime \
-                shap
-```
-
-There are several additional R libraries needed to run *rtemis*. This library changes frequently, sometimes breaking dependencies, so we do not advise building a compute environment for the current dependencies. See the R scipt included in this project for details.
+There are several additional R libraries needed to run *rtemis*. This library changes frequently, sometimes breaking dependencies. See the R scipt included in this project for details.
